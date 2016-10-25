@@ -1,0 +1,95 @@
+﻿@{
+    ViewBag.Title = "Enterprise Program Resources";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>@ViewBag.Title.</h2>
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<link href="~/Content/flipCard.css" rel="stylesheet" />
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+<div class="row">
+
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <div class="card-container manual-flip">
+            <div class="card">
+                <div class="front">
+                    <div class="card-block" style="margin-left: 20px; margin-right: 20px;">
+
+                        <button class="btn btn-simple" rel="tooltip" title="Flip Card" onclick="rotateCard(this)">
+                            <i class="glyphicon glyphicon-refresh"></i>
+                        </button>
+
+                        <img class="card-img" src="~/imgs/AECOM.jpg" alt="card image cap" />
+
+                        <h4 class="card-title">Paul Wilson</h4>
+                        <p class="card-text">Role: Regional BIM Director</p>
+                        <p class="card-text">Reposibilities:
+                        <ul>
+                            <li>A</li>
+                            <li>B</li>
+                            <li>C</li>
+                            <li>D</li>
+                            <li>E</li>
+                            <li>F</li>
+                        </ul>
+                        </p>
+                        <p class="card-text">Contact Details:
+                        <a>paul@aecom.com</a>
+                        <a>+1233344</a>
+                        </p>
+                        <p class="card-text">
+                            <small class="text-muted">Last updated October-2016</small>
+                        </p>
+                    </div>
+                </div>
+                <div class="back">
+                    <button class="btn btn-simple" rel="tooltip" title="Flip Card" onclick="rotateCard(this)">
+                        <i class="glyphicon glyphicon-refresh"></i>
+                    </button>
+                    Back
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card-container manual-flip">
+            <div class="card">
+                <div class="front">
+                    <div class="card-block" style="margin-left: 20px; margin-right: 20px;">
+
+                        <button class="btn btn-simple" rel="tooltip" title="Flip Card" onclick="rotateCard(this)">
+                            <i class="glyphicon glyphicon-refresh"></i>
+                        </button>
+
+                        <img class="card-img" src="~/imgs/Autodesk.png" alt="card image cap" />
+
+                        <h4 class="card-title">Card title</h4>
+                        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                        <p class="card-text">
+                            <small class="text-muted">Last updated 3 mins ago</small>
+                        </p>
+                    </div>
+                </div>
+                <div class="back">
+                    <button class="btn btn-simple" rel="tooltip" title="Flip Card" onclick="rotateCard(this)">
+                        <i class="glyphicon glyphicon-refresh"></i>
+                    </button>
+                    Back
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    function rotateCard(btn) {
+        var $card = $(btn).closest('.card-container');
+        console.log($card);
+        if ($card.hasClass('hover')) {
+            $card.removeClass('hover');
+        } else {
+            $card.addClass('hover');
+        }
+    }
+</script>
