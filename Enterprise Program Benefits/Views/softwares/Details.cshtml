@@ -1,0 +1,75 @@
+﻿@model Enterprise_Program_Benefits.Models.software
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>software</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SoftwareName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoftwareName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TokenRate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TokenRate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LearnIt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LearnIt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductFamily)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductFamily)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Platform)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Platform)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LicenseType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LicenseType)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.SoftwareId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

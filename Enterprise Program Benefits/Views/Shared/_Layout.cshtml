@@ -3,10 +3,11 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - Enterprise Program Benefits</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -25,7 +26,7 @@
                     <li>@Html.ActionLink("Team Resources", "Index", "Resources")</li>
                     <li>@Html.ActionLink("Consulting", "Consulting", "Home")</li>
                     <li>@Html.ActionLink("Support", "Support", "Home")</li>
-                    <li>@Html.ActionLink("Products", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Products", "Index", "softwares")</li>
                     <li>@Html.ActionLink("FAQs", "FAQs", "Home")</li>
                 </ul>
                @* @Html.Partial("_LoginPartial")*@
@@ -43,5 +44,8 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+
+
 </body>
+
 </html>
