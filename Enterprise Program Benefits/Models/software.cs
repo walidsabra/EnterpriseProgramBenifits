@@ -12,7 +12,7 @@ namespace Enterprise_Program_Benefits.Models
         [Display(Name = "Software Name")]
         public string SoftwareName { get; set; }
         public string Description { get; set; }
-        [Display(Name = "Token Rate")]
+        [Display(Name = "Product Type")]
         public string TokenRate { get; set; }
         [Display(Name = "Tools Channel")]
         public string LearnIt { get; set; }
