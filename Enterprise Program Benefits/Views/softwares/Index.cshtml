@@ -1,0 +1,99 @@
+﻿@model IEnumerable<Enterprise_Program_Benefits.Models.software>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/Content/flipCard1.css" rel="stylesheet" />
+<div class="container-fluid">
+    <div class="row col-md-offset-1">
+        <h2>Products</h2>
+        <a>@Html.ActionLink("Create New", "Create")</a>
+        <div class="row">
+            <form class="navbar-form navbar-right" role="search">
+                <div class="form-group form-inline">
+                    <input type="text" id="txtSearch" class="form-control" placeholder="Search ...">
+                </div>
+                <a class="btn btn-primary glyphicon glyphicon-search" id="btnSearch"></a>
+                <a class="btn btn-danger glyphicon glyphicon-refresh" id="btnReset"></a>
+            </form>
+            <br />
+        </div>
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div>
+                    <div class="col-md-3">
+                        <div class="card-container manual-flip">
+                            <div class="card">
+                                <div class="front">
+                                    <div class="card-block" style="margin-left: 10px; margin-right: 10px;">
+                                        <button class="btn btn-simple" rel="tooltip" title="Flip Card" onclick="rotateCard(this)">
+                                            <i class="glyphicon glyphicon-refresh"></i>
+                                        </button>
+                                        <h4 class="card-title">@item.SoftwareName</h4>
+                                        @if (string.IsNullOrEmpty(@item.ImagePath))
+                                        {
+                                            <img class="card-img" src="~/imgs/placeholder.jpg" alt="Product Image" width="220" height="140" />
+                                        }
+                                        else
+                                        {
+                                            <img class="card-img" src=@item.ImagePath alt="Product Image" width="220" height="140" />
+                                        }
+
+                                        <p class="card-text">
+                                            <b>Description:</b><br />
+                                            @item.Description <br />
+
+                                        </p>
+                                    </div>
+
+                                </div>
+                                <div class="back">
+                                    <button class="btn btn-simple" rel="tooltip" title="Flip Card" onclick="rotateCard(this)">
+                                        <i class="glyphicon glyphicon-refresh"></i>
+                                    </button>
+                                    <a class="btn btn-simple" rel="tooltip" title="Edit Software Details" href="@Url.Action("Edit", "Softwares", new { id = item.SoftwareId})">
+                                        <i class="glyphicon glyphicon-edit"></i>
+                                    </a>
+                                    <a class="btn btn-simple" rel="tooltip" title="Delete" href="@Url.Action("Delete", "Softwares", new { id = item.SoftwareId })">
+                                        <i class="glyphicon glyphicon-remove"></i>
+                                    </a>
+                                    <p class="card-text" style="margin-left: 20px; margin-right: 20px;">
+                                        <b>Platform:</b> @item.Platform <br />
+                                        <b>License Type:</b> @item.LicenseType <br />
+                                        <b>Product Type:</b> @item.TokenRate <br />
+                                        <b>Product Family:</b> @item.ProductFamily <br />
+                                        <br />
+                                        <b>Tool Channel:</b> <a target="_blank" href="@item.LearnIt">@item.LearnIt</a> <br />
+                                        <br />
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+<script>
+    function rotateCard(btn) {
+        var $card = $(btn).closest('.card-container');
+        console.log($card);
+        if ($card.hasClass('hover')) {
+            $card.removeClass('hover');
+        } else {
+            $card.addClass('hover');
+        }
+    };
+
+    $("#btnSearch").click(function () {
+        window.location = "/softwares/index?SearchValue=" + $("#txtSearch").val();
+    });
+    $("#btnReset").click(function () {
+        window.location = "/softwares/index";
+    });
+
+</script>

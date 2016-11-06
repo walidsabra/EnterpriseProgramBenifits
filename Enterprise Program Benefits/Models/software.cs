@@ -21,6 +21,6 @@ namespace Enterprise_Program_Benefits.Models
         public string Platform { get; set; }
         [Display(Name = "License Type")]
         public string LicenseType { get; set; }
-
+        public string ImagePath { get; set; }
     }
 }

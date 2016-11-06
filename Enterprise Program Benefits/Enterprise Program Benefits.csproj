@@ -186,6 +186,10 @@
     <Compile Include="Migrations\201610260646273_software.Designer.cs">
       <DependentUpon>201610260646273_software.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201611060730458_ImagePath.cs" />
+    <Compile Include="Migrations\201611060730458_ImagePath.Designer.cs">
+      <DependentUpon>201611060730458_ImagePath.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -216,6 +220,54 @@
     <Content Include="imgs\placeholder 2.jpg" />
     <Content Include="imgs\placeholder.jpg" />
     <Content Include="imgs\products.png" />
+    <Content Include="imgs\products\3ds_Max_2017.jpg" />
+    <Content Include="imgs\products\Advance_Concrete_2017.jpg" />
+    <Content Include="imgs\products\Advance_Steel_2017.jpg" />
+    <Content Include="imgs\products\Alias_Design_2017.jpg" />
+    <Content Include="imgs\products\AutoCAD_2017.jpg" />
+    <Content Include="imgs\products\AutoCAD_Architecture_2017.jpg" />
+    <Content Include="imgs\products\AutoCAD_Civil_3d_2017.jpg" />
+    <Content Include="imgs\products\AutoCAD_Electrical_2017.jpg" />
+    <Content Include="imgs\products\AutoCAD_for_Mac_2017.jpg" />
+    <Content Include="imgs\products\AutoCAD_Map_3d-Infrastructure_Map_Server_2017.jpg" />
+    <Content Include="imgs\products\AutoCAD_Mechanical_2017.jpg" />
+    <Content Include="imgs\products\AutoCAD_Plant_3D_2017.jpg" />
+    <Content Include="imgs\products\AutoCAD_P_ID_2017.jpg" />
+    <Content Include="imgs\products\AutoCAD_Raster_Design_2017.jpg" />
+    <Content Include="imgs\products\BIM_360_Glue_and_Field_2017.jpg" />
+    <Content Include="imgs\products\Building_Ops_2017.jpg" />
+    <Content Include="imgs\products\CFD_2017.jpg" />
+    <Content Include="imgs\products\Collaboration_for_Revit.jpg" />
+    <Content Include="imgs\products\Dynamo_Studio_2017.jpg" />
+    <Content Include="imgs\products\Factory_Design_Suite_2017.jpg" />
+    <Content Include="imgs\products\Formit_2017.jpg" />
+    <Content Include="imgs\products\InfraWorks_360_2017.jpg" />
+    <Content Include="imgs\products\Insight_360_2017.jpg" />
+    <Content Include="imgs\products\Inventor_2017.jpg" />
+    <Content Include="imgs\products\Inventor_ETO_and_OEM_2017.jpg" />
+    <Content Include="imgs\products\Live _2017.jpg" />
+    <Content Include="imgs\products\Maya_2017.jpg" />
+    <Content Include="imgs\products\Moldflow_2017.jpg" />
+    <Content Include="imgs\products\MotionBuilder_2017.jpg" />
+    <Content Include="imgs\products\Mudbox_2017.jpg" />
+    <Content Include="imgs\products\Nastran_In-CAD_2017.jpg" />
+    <Content Include="imgs\products\Navisworks_2017.jpg" />
+    <Content Include="imgs\products\Office_SanFrancisco-1425.jpg" />
+    <Content Include="imgs\products\Plant_Design_Suite_2017.jpg" />
+    <Content Include="imgs\products\Point_Layout_2017.jpg" />
+    <Content Include="imgs\products\ReCap_360_2017.jpg" />
+    <Content Include="imgs\products\ReMake_2017.jpg" />
+    <Content Include="imgs\products\Revit_2017.jpg" />
+    <Content Include="imgs\products\Robot_Structural_Analysis_Professional_2017.jpg" />
+    <Content Include="imgs\products\Showcase_2017.jpg" />
+    <Content Include="imgs\products\Simulation_Mechanical_2017.jpg" />
+    <Content Include="imgs\products\SketchBook_Designer_2017.jpg" />
+    <Content Include="imgs\products\Stingray_2017.jpg" />
+    <Content Include="imgs\products\Vault_2017.jpg" />
+    <Content Include="imgs\products\VRED_2017.jpg" />
+    <Content Include="imgs\products\VRED_Design_2017.jpg" />
+    <Content Include="imgs\products\VRED_Presenter_2017.jpg" />
+    <Content Include="imgs\products\VRED_Professional_2017.jpg" />
     <Content Include="imgs\S01.png" />
     <Content Include="imgs\s1.png" />
     <Content Include="imgs\s2.png" />
@@ -321,6 +373,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201610260646273_software.resx">
       <DependentUpon>201610260646273_software.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611060730458_ImagePath.resx">
+      <DependentUpon>201611060730458_ImagePath.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

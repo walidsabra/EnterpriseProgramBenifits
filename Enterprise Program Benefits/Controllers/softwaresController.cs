@@ -63,7 +63,7 @@ namespace Enterprise_Program_Benefits.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "SoftwareId,SoftwareName,Description,TokenRate,LearnIt,ProductFamily,Platform,LicenseType")] software software)
+        public ActionResult Create([Bind(Include = "SoftwareId,SoftwareName,Description,TokenRate,LearnIt,ProductFamily,Platform,LicenseType,ImagePath")] software software)
         {
             if (ModelState.IsValid)
             {
@@ -95,7 +95,7 @@ namespace Enterprise_Program_Benefits.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "SoftwareId,SoftwareName,Description,TokenRate,LearnIt,ProductFamily,Platform,LicenseType")] software software)
+        public ActionResult Edit([Bind(Include = "SoftwareId,SoftwareName,Description,TokenRate,LearnIt,ProductFamily,Platform,LicenseType,ImagePath")] software software)
         {
             if (ModelState.IsValid)
             {
