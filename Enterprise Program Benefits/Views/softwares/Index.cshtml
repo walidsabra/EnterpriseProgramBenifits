@@ -20,7 +20,7 @@
             <br />
         </div>
         <div class="row">
-            @foreach (var item in Model)
+            @foreach (var item in Model.OrderBy(a=>a.SoftwareName))
             {
                 <div>
                     <div class="col-md-3">

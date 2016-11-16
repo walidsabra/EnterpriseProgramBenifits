@@ -11,6 +11,7 @@ namespace Enterprise_Program_Benefits.Models
         public int SoftwareId { get; set; }
         [Display(Name = "Software Name")]
         public string SoftwareName { get; set; }
+        [DataType(DataType.MultilineText)]
         public string Description { get; set; }
         [Display(Name = "Product Type")]
         public string TokenRate { get; set; }
@@ -21,6 +22,7 @@ namespace Enterprise_Program_Benefits.Models
         public string Platform { get; set; }
         [Display(Name = "License Type")]
         public string LicenseType { get; set; }
+        [Display(Name = "Image")]
         public string ImagePath { get; set; }
     }
 }
